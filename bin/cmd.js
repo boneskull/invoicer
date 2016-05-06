@@ -114,6 +114,7 @@ function withConfig (cfg, expenses) {
             doc.fillColor('black').text(row.title, { lineGap: 6 })
                 .fillColor('#666');
             row.hours.forEach(function (r) {
+                r.hours = Number(r.hours) || 0;
                 doc.text(r.date, opts)
                     .text(r.hours + 'h * ' + row.rate, { align: 'right' });
             });
