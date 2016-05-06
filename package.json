@@ -1,5 +1,5 @@
 {
-  "name": "invoicer",
+  "name": "@boneskull/invoicer",
   "version": "1.0.1",
   "description": "generate PDF invoices from json",
   "bin": "bin/cmd.js",
@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/invoicer.git"
+    "url": "git://github.com/boneskull/invoicer.git"
   },
-  "homepage": "https://github.com/substack/invoicer",
+  "homepage": "https://github.com/boneskull/invoicer",
   "keywords": [
     "invoice",
     "pdf",
