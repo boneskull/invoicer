@@ -168,9 +168,12 @@ function withConfig (cfg, expenses) {
         
         doc.fillColor('black').text('________________________________');
 
-        doc.text('Total Hours', opts).text(hours, { align: 'right' });
-        doc.text('Hourly Rate', opts)
-            .text(rates.join(',') + ' ' + cfg.currency, { align: 'right' });
+        if (hours > 0) {
+            doc.text('Total Hours', opts)
+              .text(hours, {align: 'right'});
+            doc.text('Hourly Rate', opts)
+              .text(rates.join(',') + ' ' + cfg.currency, {align: 'right'});
+        }
         doc.text('Total (USD)', opts).text(amount, { align: 'right' });
 
         doc.fillColor('black').moveUp()
