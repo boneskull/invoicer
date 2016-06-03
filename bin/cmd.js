@@ -97,8 +97,10 @@ function withConfig (cfg, expenses) {
       .text(new Date().toJSON().slice(0,10));
 
     doc.moveDown().text(cfg.name);
-    doc.text(cfg.address, { continued: true})
-        .text(cfg.email, { align: 'right'});
+    if (cfg.address) {
+        doc.text(cfg.address, { continued: true})
+            .text(cfg.email, { align: 'right'});
+    }
 
     doc.moveDown().fillColor('black').text('Invoice To:');
 
